@@ -4,7 +4,7 @@
 
 **Why is it v2 ? The v1 isn't over yet.**
 
-It's true, but i speak here of V2 of app because of many improvements in my knowledge (technologies and libraries), and i want to start it again from scratch, to rethink all of it.
+It's true, but I speak here of V2 of app because of many improvements in my knowledge (technologies and libraries), and I want to start it again from scratch, to rethink all of it.
 
 
 **What is the stack here ?**
@@ -53,7 +53,7 @@ Basic routes :
 | `/customers` | All customers | Display all customers, with instant search on it |
 | `/customers/:id` | One customer | Display one specific customer, with all his orders and maybe later some stats (last order, total amount, etc...) |
 
-The others routes should be like this (but i'm not really sure, _i need to think about it_) :
+The others routes should be like this (but i'm not really sure, _I need to think about it_) :
 
 | Path | Name | Role |
 |------|------|------|
@@ -62,9 +62,9 @@ The others routes should be like this (but i'm not really sure, _i need to think
 
 ### Components
 
-The main point of react is to make reusable component. But i have a problem : some of my components must be able to display itself in differents ways to fit in the context.
+The main point of react is to make reusable component. But I have a problem : some of my components must be able to display itself in differents ways to fit in the context.
 
-So i think i'll pass it a prop to make conditional rendering. For example :
+So I think i'll pass it a prop to make conditional rendering. For example :
 
 ```html
 <!-- This will render the Customer component for full screen, as it should be
@@ -76,7 +76,7 @@ for viewing all customers in '/customers'  -->
 <Customer display="compact" />
 ```
 
-Here is a quick list of components i will need to write :
+Here is a quick list of components I will need to write :
 ```html
 <!-- Basics -->
 <App />
