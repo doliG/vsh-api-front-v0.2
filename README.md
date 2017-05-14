@@ -4,12 +4,12 @@
 
 **Why is it v2 ? The v1 isn't over yet.**
 
-It's true, but i speak here of V2 of app because of many improvements in my knowledge if technologies and libraries, and i want to start it again from scratch. Rethink it all, to do a better app.
+It's true, but i speak here of V2 of app because of many improvements in my knowledge (technologies and libraries), and i want to start it again from scratch, to rethink all of it.
 
 
 **What is the stack here ?**
 
-This project is based on a basic no-name customers/orders api. So because this api is already done, there is no back-end to do here. I will use a common and basic front stack here :
+This project is based on a basic no-name customers/orders api. Because this api is already done, there is no back-end in this projet. This is a **react front app**. I will use a common and basic front stack here :
 
 - Routing : `react-router`
 - Data storage, and rendering : `react`, `react-dom`, `redux`
@@ -18,7 +18,9 @@ This project is based on a basic no-name customers/orders api. So because this a
 
 **License**
 
-You can do what you want with this, this is just a training after all.
+This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+
+![License](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)
 
 
 
@@ -32,14 +34,14 @@ Customers functionalities :
 - Delete a specific customer
 
 Orders functionalities :
-- Search in customers orders
+- Search in customer's orders
 - Search in all orders
 - Delete order
 - Update order (optional)
 
 
 
-## Organisation
+## Organization
 
 ### Routes
 
@@ -47,7 +49,7 @@ Basic routes :
 
 | Path | Name | Role |
 |------|------|------|
-| `/` | Home | Display quick menu for accessing others pages |
+| `/` | Home | Display quick menu for accessing others pages (and then a global search in orders and customers) |
 | `/customers` | All customers | Display all customers, with instant search on it |
 | `/customers/:id` | One customer | Display one specific customer, with all his orders and maybe later some stats (last order, total amount, etc...) |
 
@@ -56,17 +58,17 @@ The others routes should be like this (but i'm not really sure, _i need to think
 | Path | Name | Role |
 |------|------|------|
 | `/customers/new` | Add customer | Add a new customer to database |
-| `/customers/:id/neworder` | Add order | Add a new order to database (ofc each order link to a customer by custommer's id) |
+| `/customers/:id/neworder` | Add order | Add a new order to database (ofc each order link to a customer by customer's id) |
 
 ### Components
 
-The main point of react is to make reusable component. But i have a problem : some of my components must be able to display itself in differents ways.
+The main point of react is to make reusable component. But i have a problem : some of my components must be able to display itself in differents ways to fit in the context.
 
-So i think i'll pass them a prop which help me to make conditional rendering. For exemple :
+So i think i'll pass it a prop to make conditional rendering. For example :
 
 ```html
 <!-- This will render the Customer component for full screen, as it should be
-for a specific customer displaying '/customers/:id' -->
+for a specific customer displaying in '/customers/:id' -->
 <Customer display="full-screen" />
 
 <!-- This will render the Customer component for compact views, as it should be
@@ -79,7 +81,7 @@ Here is a quick list of components i will need to write :
 <!-- Basics -->
 <App />
 <PrimaryNav />
-<Search /> <!-- I dont really know how to get this working in all my childs components.
+<Search /> <!-- I don't really know how to get this working in all my children components.
 I will probably create a custom search in each page, and general search in homepage -->
 <Footer /> <!-- Optional -->
 
@@ -96,6 +98,6 @@ I will probably create a custom search in each page, and general search in homep
 ```
 
 
-## Notes and personnal questions
+## Notes and personal questions
 
-- It seems that there is no route in back api to get customer'orders in one request : I should be forced to make a request by order, with the id of itself.
+- It seems that there is no route in back api to get customer's orders in one request : I should be forced to make a request by order, with the id of itself.
