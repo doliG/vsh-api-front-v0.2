@@ -10,6 +10,7 @@ import { Switch, Route } from 'react-router-dom';
 
 // Components
 import Navbar from 'src/components/Navbar';
+import HomePage from 'src/components/pages/HomePage';
 
 /**
  * Code
@@ -18,7 +19,7 @@ const App = () => (
   <div id="app">
     <Navbar />
     <Switch>
-      <Route exact path="/" component={() => <p>Home</p>} />
+      <Route exact path="/" component={HomePage} />
       <Route exact path="/customers" component={() => <p>All customers</p>} />
       <Route exact path="/customers/new" component={() => <p>Add a new customer to database</p>} />
       <Route exact path="/customers/:id" component={() => <p>Display one specific customer, with all his orders and maybe later some stats (last order, total amount, etc...)</p>} />
