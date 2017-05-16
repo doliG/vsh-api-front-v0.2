@@ -1,10 +1,10 @@
-# vsh api v2
+# vsh api v0.2
 
 ## Q & A
 
-**Why is it v2 ? The v1 isn't over yet.**
+**Why is it v0.2 ? The v1 isn't over yet.**
 
-It's true, but I speak here of V2 of app because of many improvements in my knowledge (technologies and libraries), and I want to start it again from scratch, to rethink all of it.
+It's true, but I speak here of v0.2 of app because of many improvements in my knowledge (technologies and libraries), and I want to start it again from scratch, to rethink all of it.
 
 
 **What is the stack here ?**
