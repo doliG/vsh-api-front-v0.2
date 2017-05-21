@@ -8,7 +8,8 @@ import { applyMiddleware, compose, createStore } from 'redux';
  * Local import
  */
 import reducer from './reducer';
-import createMiddleware from './middleware';
+import ajaxMiddleware from './middlewares/ajax';
+import normalizerMiddleware from './middlewares/normalizer';
 
 
 /*
@@ -21,7 +22,7 @@ if (window.devToolsExtension) {
 }
 
 // Middlewares
-const middleware = applyMiddleware(createMiddleware);
+const middleware = applyMiddleware(ajaxMiddleware, normalizerMiddleware);
 const middlewares = compose(middleware, ...devTools);
 
 // Store

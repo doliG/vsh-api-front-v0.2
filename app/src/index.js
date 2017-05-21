@@ -10,8 +10,9 @@ import { BrowserRouter as Router } from 'react-router-dom';
 /*
  * Local import
  */
-import App from 'src/components/App';
+import App from 'src/containers/App';
 import store from 'src/store';
+import { getCustomersFromApi } from 'src/store/middlewares/ajax';
 
 
 /*
@@ -25,5 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
       </Router>
     </Provider>
   );
+  // Rendering app
   render(provider, document.getElementById('root'));
+  // Getting base data and putting it in state
+  store.dispatch(getCustomersFromApi());
 });
