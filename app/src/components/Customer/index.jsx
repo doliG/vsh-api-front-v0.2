@@ -13,22 +13,36 @@ import CustomerNotFound from 'src/components/errors/CustomerNotFound';
 /**
  * Component (pure function)
  */
+/* eslint-disable camelcase */
+
 const Customer = ({ id, profile }) => {
   if (profile) {
+    const {
+      first_name,
+      last_name,
+      address,
+      post_code,
+      city,
+      phone,
+    } = profile;
     return (
       <div className="customer">
-        Customer {id}
         <div className="customer-name">
-          {profile.first_name}
-          {profile.last_name}
-        </div>
-        <div className="customer-address">
-          {profile.address}
-          {profile.post_code}
-          {profile.city}
+          {`${first_name} ${last_name}`}
         </div>
         <div className="customer-phone">
-          {profile.phone}
+          {phone}
+        </div>
+        <div className="customer-address">
+          <div className="customer-address-street">
+            {address}
+          </div>
+          <div className="customer-address-city">
+            {`${post_code} - ${city}`}
+          </div>
+        </div>
+        <div className="customer-id">
+          {id}
         </div>
       </div>
     );
